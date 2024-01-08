@@ -5,34 +5,44 @@ export default {
         return{
             menu: [
                 {
-                    link: 'Characters'
+                    link: 'Characters',
+                    active: true,
                 },
                 {
-                    link: 'Comics'
+                    link: 'Comics',
+                    active: false,
                 },
                 {
-                    link: 'Movies'
+                    link: 'Movies',
+                    active: false,
                 },
                 {
-                    link: 'Tv'
+                    link: 'Tv',
+                    active: false,
                 },
                 {
-                    link: 'Games'
+                    link: 'Games',
+                    active: false,
                 },
                 {
-                    link: 'Collectibles'
+                    link: 'Collectibles',
+                    active: false,
                 },
                 {
-                    link: 'Videos'
+                    link: 'Videos',
+                    active: false,
                 },
                 {
-                    link: 'Fans'
+                    link: 'Fans',
+                    active: false,
                 },
                 {
-                    link: 'News'
+                    link: 'News',
+                    active: false,
                 },
                 {
-                    link: 'Shop'
+                    link: 'Shop',
+                    active: false,
                 }
             ]
         }
@@ -44,16 +54,12 @@ export default {
     <header>
         <div class="container">
             <div class="row">
-                <div class="mw-1200" >
-                    <div class="col">
-                        <div class="logo_container">
-                            <img src="../assets/img/dc-logo.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div v-for="(link, index) in menu" :key="index">
-
-                        </div>
+                <div>
+                    <img src="../assets/img/dc-logo.png" alt="">
+                </div>
+                <div class="row">
+                    <div v-for="(object, key) in menu" :class="object.active ? 'active' : ''" class="btn_menu">
+                        {{object.link}}
                     </div>
                 </div>
             </div>
@@ -64,5 +70,13 @@ export default {
 <style lang="scss">
     header{
         background-color: white;
+    }
+
+    .active{
+        color: blue;
+    }
+
+    .btn_menu{
+        padding: 2px;
     }
 </style>
