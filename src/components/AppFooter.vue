@@ -62,13 +62,31 @@ export default {
         </div>
         <div class="bottom_footer">
             <div class="container">
-                <div class="bottom-footer-menu">
-                    <button>SIGN-UP NOW!</button>
+                <div class="row">
+                    <div class="bottom-footer-menu">
+                        <button class="button-primary">SIGN-UP NOW!</button>
+                    </div>
+                    <div class="bottom-footer-menu">
+                        <div class="links">
+                            <h3>FOLLOW US</h3>
+                            <a href="">
+                            <img class="social_logo" src="../assets/img/footer-facebook.png" alt="">
+                            </a>
+                            <a href="">
+                            <img class="social_logo" src="../assets/img/footer-twitter.png" alt="">
+                            </a>
+                            <a href="">
+                            <img class="social_logo" src="../assets/img/footer-youtube.png" alt="">
+                            </a>
+                            <a href="">
+                            <img class="social_logo" src="../assets/img/footer-pinterest.png" alt="">
+                            </a>
+                            <a href="">
+                            <img class="social_logo" src="../assets/img/footer-periscope.png" alt="">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="bottom-footer-menu">
-    
-                </div>
-
             </div>
         </div>
     </footer>
@@ -79,6 +97,31 @@ export default {
 
 .bottom_footer{
     background-color: rgb(72, 72, 72);
+    .bottom-footer-menu{
+        margin: 0 30px;
+        padding: 10px 0;
+
+        .social_logo{
+            padding: 0 8px;
+        }
+
+        .links{
+            display: flex;
+            align-items: center;
+            h3{
+                color: $primary_color;
+                margin-right: 10px;
+            }
+        }
+    }
+    
+    .button-primary {
+        padding: 10px 10px;
+        border: 2px solid $primary_color;
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+    }
 }
 
 footer{
