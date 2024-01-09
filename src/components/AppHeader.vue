@@ -84,28 +84,39 @@ export default {
                 text-transform: uppercase;
                 color: black;
                 font-weight: 700;
+                position: relative;
+
             }
         }
     }
-
+    
     .logo{
         img{
             width: 80px;
         }
     }
-
+    
     .row{
         padding: 10px 0;
     }
-
+    
     header{
         background-color: white;
     }
-
+    
     .active{
         color: $primary_color;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $primary_color;
+        }
     }
-
+    
     .btn_menu{
         padding: 2px;
     }
