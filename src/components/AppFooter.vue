@@ -61,7 +61,15 @@ export default {
             </div>
         </div>
         <div class="bottom_footer">
+            <div class="container">
+                <div class="bottom-footer-menu">
+                    <button>SIGN-UP NOW!</button>
+                </div>
+                <div class="bottom-footer-menu">
+    
+                </div>
 
+            </div>
         </div>
     </footer>
 </template>
@@ -69,6 +77,13 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 
+.bottom_footer{
+    background-color: rgb(72, 72, 72);
+}
+
+footer{
+    min-width: 980px;
+}
 .top_footer{
     background-image: url('../assets/img/footer-bg.jpg');
     background-size: cover;
