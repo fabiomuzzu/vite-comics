@@ -68,7 +68,8 @@ export default {
 </template>
 
 <style lang="scss">
-@use '../styles/generals.scss';
+@use '../styles/generals.scss' as *;
+@use '../styles/partials/variables' as *;
     .menu{
         display: flex;
         align-items: center;
@@ -102,7 +103,7 @@ export default {
     }
 
     .active{
-        color: blue;
+        color: $primary_color;
     }
 
     .btn_menu{
