@@ -58,7 +58,7 @@ export default {
                     <img src="../assets/img/dc-logo.png" alt="">
                 </div>
                 <div class="menu">
-                    <ul>
+                    <ul id="menu_list">
                         <li v-for="(object, key) in menu"><a href="" :class="object.active ? 'active' : ''" class="btn_menu">{{object.link}}</a></li>
                     </ul>
                 </div>
@@ -75,17 +75,19 @@ export default {
         align-items: center;
     }
 
-    ul{
+    #menu_list{
         display: flex;
+        text-transform: uppercase;
+    }
+
+    ul{
         list-style-type: none;        
         li{
             margin: 0 10px;
             a{
-                text-transform: uppercase;
                 color: black;
                 font-weight: 700;
                 position: relative;
-
             }
         }
     }

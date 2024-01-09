@@ -9,10 +9,18 @@ export default {
 }
 </script>
 <template lang="">
-    <div>
-        
-    </div>
+    <main>
+        <div class="container">
+            <h2>Content</h2>
+        </div>
+    </main>
 </template>
-<style lang="">
+<style lang="scss" scoped>
+    main{
+        background-color: black;
+    }
     
+    h2{
+        color: white;
+    }
 </style>
