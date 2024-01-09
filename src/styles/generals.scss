@@ -4,12 +4,9 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: red;
-}
-
 .container{
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 .container, .row, .col{
@@ -20,4 +17,9 @@ body{
 
 .row{
     display: flex;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
 }

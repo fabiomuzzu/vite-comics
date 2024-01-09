@@ -6,11 +6,11 @@ export default {
             menu: [
                 {
                     link: 'Characters',
-                    active: true,
+                    active: false,
                 },
                 {
                     link: 'Comics',
-                    active: false,
+                    active: true,
                 },
                 {
                     link: 'Movies',
@@ -54,13 +54,13 @@ export default {
     <header>
         <div class="container">
             <div class="row">
-                <div>
+                <div class="logo">
                     <img src="../assets/img/dc-logo.png" alt="">
                 </div>
-                <div class="row">
-                    <div v-for="(object, key) in menu" :class="object.active ? 'active' : ''" class="btn_menu">
-                        {{object.link}}
-                    </div>
+                <div class="menu">
+                    <ul>
+                        <li v-for="(object, key) in menu"><a href="" :class="object.active ? 'active' : ''" class="btn_menu">{{object.link}}</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -68,6 +68,35 @@ export default {
 </template>
 
 <style lang="scss">
+@use '../styles/generals.scss';
+    .menu{
+        display: flex;
+        align-items: center;
+    }
+
+    ul{
+        display: flex;
+        list-style-type: none;        
+        li{
+            margin: 0 10px;
+            a{
+                text-transform: uppercase;
+                color: black;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .logo{
+        img{
+            width: 80px;
+        }
+    }
+
+    .row{
+        padding: 10px 0;
+    }
+
     header{
         background-color: white;
     }
