@@ -78,19 +78,30 @@ export default {
     #menu_list{
         display: flex;
         text-transform: uppercase;
+        list-style-type: none;        
+            li{
+                margin: 0 10px;
+                a{
+                    color: black;
+                    font-weight: 700;
+                    position: relative;
+                }
+                .active{
+                    color: $primary_color;
+            
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $primary_color;
+                    }
+                }
+            }
     }
 
-    ul{
-        list-style-type: none;        
-        li{
-            margin: 0 10px;
-            a{
-                color: black;
-                font-weight: 700;
-                position: relative;
-            }
-        }
-    }
     
     .logo{
         img{
@@ -106,18 +117,6 @@ export default {
         background-color: white;
     }
     
-    .active{
-        color: $primary_color;
-        &::after{
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: $primary_color;
-        }
-    }
     
     .btn_menu{
         padding: 2px;
