@@ -84,6 +84,11 @@ export default {
 
 <template lang="">
     <main>
+        <div class="jumbotron">
+            <div class="container">
+                <button class="current_btn">CURRENT SERIES</button> 
+            </div>
+        </div>
         <div class="container">
             <div class="card-container">
                 <div class="card" v-for="comic, index in comics">
@@ -96,6 +101,25 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
+
+
+
+.current_btn {
+    padding: 10px 10px;
+    border: 2px solid $primary_color;
+    color: white;
+    background-color: $primary_color;
+    cursor: pointer;
+}
+.jumbotron{
+    background-image: url(../assets/img/jumbotron.jpg);
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 main {
     background-color: black;
 }
