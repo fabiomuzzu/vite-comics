@@ -1,6 +1,10 @@
 <script>
+import SingleComic from './SingleComic.vue';
+
 export default {
-    name: 'AppMain',
+    components:{
+        SingleComic
+    },
     data() {
         return {
             comics: [
@@ -86,15 +90,14 @@ export default {
     <main>
         <div class="jumbotron">
             <div class="container">
-                <button class="current_btn">CURRENT SERIES</button> 
+                <div class="btn_relative">
+                    <button class="current_btn">CURRENT SERIES</button> 
+                </div>
             </div>
         </div>
         <div class="container">
             <div class="card-container">
-                <div class="card" v-for="comic, index in comics">
-                    <img :src="comic.thumb" alt="">
-                    {{comic.series}}
-                </div>
+                <SingleComic v-for="comic, index in comics" :key="index" :fumetto="comic"/>
             </div>
         </div>
     </main>
@@ -104,17 +107,24 @@ export default {
 @use '../styles/partials/variables' as *;
 
 
+.btn_relative{
+    position: relative;
+}
 
 .current_btn {
-    padding: 10px 10px;
+    padding: 15px 15px;
     border: 2px solid $primary_color;
     color: white;
     background-color: $primary_color;
     cursor: pointer;
+    position: absolute;
+    top: 370px;
+    font-size: 16px;
+    font-weight: 700;
 }
 .jumbotron{
     background-image: url(../assets/img/jumbotron.jpg);
-    height: 450px;
+    height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -126,6 +136,18 @@ main {
 
 .card-container {
     display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+    .card{
+        color: white;
+        width: calc(100% / 6 - 10px);
+        margin: 30px 5px;
+        height: 300px;
+
+        img{
+            height: 300px;
+        }
+    }
 }
 
 h2 {
