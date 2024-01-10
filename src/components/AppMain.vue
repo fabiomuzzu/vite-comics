@@ -92,6 +92,7 @@ export default {
             <div class="container">
                 <div class="btn_relative">
                     <button class="current_btn">CURRENT SERIES</button> 
+                    <button class="load_btn">LOAD MORE</button> 
                 </div>
             </div>
         </div>
@@ -112,13 +113,26 @@ export default {
 }
 
 .current_btn {
-    padding: 15px 15px;
+    padding: 15px 20px;
     border: 2px solid $primary_color;
     color: white;
     background-color: $primary_color;
     cursor: pointer;
     position: absolute;
     top: 370px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.load_btn {
+    padding: 15px 40px;
+    border: 2px solid $primary_color;
+    color: white;
+    background-color: $primary_color;
+    cursor: pointer;
+    position: absolute;
+    top: 1190px;
+    left: 500px;
     font-size: 16px;
     font-weight: 700;
 }
@@ -137,7 +151,7 @@ main {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 0px;
+    padding: 50px 0px 90px;
     .card{
         color: white;
         width: calc(100% / 6 - 10px);
